@@ -5,7 +5,7 @@ import numpy as np
 from supremacy import helpers
 
 # This is your team name
-CREATOR = "SimpleAI"
+CREATOR = "SimSOMETHONGpleAI"
 
 
 def tank_ai(tank, info, game_map):
