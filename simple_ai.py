@@ -30,7 +30,7 @@ def ship_ai(ship, info, game_map):
     Function to control ships.
     """
     if not ship.stopped:
-        if (ship.get_distance(ship.owner.x, ship.owner.y) > 140):
+        if (ship.get_distance(ship.owner.x, ship.owner.y) > 160):
             ship.set_heading(np.random.random() * 360.0)
         if ship.stuck:
             if ship.get_distance(ship.owner.x, ship.owner.y) > 40:
@@ -75,7 +75,7 @@ class PlayerAi:
             # It will return None if the base did not have enough resources to build.
             if base.mines == 3:
                 self.build_queue = helpers.BuildQueue(
-                ["mine", "ship", "tank","tank","tank","tank","tank","jet", "tank", "ship", "tank","tank","tank","tank","tank", "tank", "jet", "tank", "ship", "jet", "tank", "ship", "jet", "tank", "ship", "jet", "tank", "ship", "jet", "tank", "ship", "jet", "tank", "ship", "jet"], cycle=True)
+                ["mine", "ship", "tank","tank", "ship","tank","tank","tank", "jet", "tank","jet", "tank", "ship", "tank","tank","tank","tank","tank", "tank", "jet", "tank", "ship", "jet", "tank", "ship", "jet", "tank", "ship", "jet", "tank", "ship", "jet", "tank", "ship", "jet", "tank", "ship", "jet"], cycle=True)
 
             obj = self.build_queue(base)
             if (obj is not None) and (obj.kind == 'tank'):
